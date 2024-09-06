@@ -22,13 +22,13 @@ class AppLocalization {
         LocKey.getStart:"Get Started",
         LocKey.language:"Langauge",
         LocKey.khmerLanguage:"Khmer Langauge",
-        LocKey.khmerLanguage:"English Langauge"
+        LocKey.englishLanguage:"English Langauge"
       },
       "km":{
         LocKey.getStart:"ចាប់ផ្តើម",
         LocKey.language:"ភាសារ",
         LocKey.khmerLanguage:"ភាសារខ្មែរ",
-        LocKey.khmerLanguage:"ភាសារអង់គ្លេស"
+        LocKey.englishLanguage:"ភាសារអង់គ្លេស"
     }
   };
 
