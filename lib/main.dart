@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
             useMaterial3: false,
             primaryColor: const Color(0xFF018AAA)
           ),
-          initialRoute: RouteGenerator.splashPage,
+          initialRoute: RouteGenerator.registerScreen,
           onGenerateRoute: RouteGenerator.routeGenerate,
           navigatorKey: RouteGenerator.key,
           locale: language.appLocal,
