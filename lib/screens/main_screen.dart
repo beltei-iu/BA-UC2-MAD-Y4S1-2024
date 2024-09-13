@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mad3/localization/app_localization.dart';
 import 'package:mad3/screens/class_screen.dart';
 import 'package:mad3/screens/home_screen.dart';
 import 'package:mad3/screens/more_screen.dart';
@@ -23,9 +24,9 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
 
     final items = [
-      BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-      BottomNavigationBarItem(icon: Icon(Icons.class_outlined), label: "Class"),
-      BottomNavigationBarItem(icon: Icon(Icons.more_horiz_sharp), label: "More"),
+      BottomNavigationBarItem(icon: Icon(Icons.home), label: AppLocalization.of(context)!.translate(LocKey.home)),
+      BottomNavigationBarItem(icon: Icon(Icons.class_outlined), label: AppLocalization.of(context)!.translate(LocKey.classroom)),
+      BottomNavigationBarItem(icon: Icon(Icons.more_horiz_sharp), label: AppLocalization.of(context)!.translate(LocKey.more)),
     ];
 
     final buttonNavigationBar = BottomNavigationBar(

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1027220963414",
+    "project_id": "beltei",
+    "storage_bucket": "beltei.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027220963414:android:27867160a6f59b758f7bf7",
+        "android_client_info": {
+          "package_name": "kh.edu.beltei.mad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7zBVe3DmhLcoaTbK0y58wiGXw4LgZuWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1027220963414:android:6480de35b95ca4508f7bf7",
+        "android_client_info": {
+          "package_name": "kh.edu.betlei.mad"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7zBVe3DmhLcoaTbK0y58wiGXw4LgZuWM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

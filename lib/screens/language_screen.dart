@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mad3/localization/app_localization.dart';
+import 'package:mad3/provider/language_provider.dart';
+import 'package:provider/provider.dart';
 
 class LanguageScreen extends StatefulWidget {
   const LanguageScreen({super.key});
@@ -10,10 +12,12 @@ class LanguageScreen extends StatefulWidget {
 
 class _LanguageScreenState extends State<LanguageScreen> {
 
-  bool _isKhmer = true;
-
   @override
   Widget build(BuildContext context) {
+
+    final languageProvider = Provider.of<LanguageProvider>(context);
+    final locale = languageProvider.appLocal;
+
     return Scaffold(
         appBar: AppBar(
           title: Text(AppLocalization.of(context)!.translate(LocKey.language)),
@@ -26,10 +30,10 @@ class _LanguageScreenState extends State<LanguageScreen> {
             child: ListTile(
               title: Text(AppLocalization.of(context)!.translate(LocKey.khmerLanguage)),
               trailing: Checkbox(
-                  value: _isKhmer, onChanged: (v){
-                    setState(() {
-                      _isKhmer = true;
-                    });
+                  value: locale.languageCode == "km",
+                  onChanged: (v){
+                    final provider = Provider.of<LanguageProvider>(context, listen: false);
+                    provider.changeLanguage(Locale("km"));
               }),
             ),
           ),
@@ -37,11 +41,10 @@ class _LanguageScreenState extends State<LanguageScreen> {
             child: ListTile(
               title: Text(AppLocalization.of(context)!.translate(LocKey.englishLanguage)),
               trailing: Checkbox(
-                  value: !_isKhmer, onChanged: (v){
-                    setState(() {
-                      _isKhmer = false;
-
-                    });
+                  value: locale.languageCode != "km",
+                  onChanged: (v){
+                    final provider = Provider.of<LanguageProvider>(context, listen: false);
+                    provider.changeLanguage(Locale("en"));
               }),
             ),
           )

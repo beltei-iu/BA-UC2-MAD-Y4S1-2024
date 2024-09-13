@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mad3/localization/app_localization.dart';
 import 'package:mad3/routes.dart';
 
 class MoreScreen extends StatefulWidget {
@@ -13,7 +14,7 @@ class _MoreScreenState extends State<MoreScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("More"),
+        title: Text(AppLocalization.of(context)!.translate(LocKey.more)),
         centerTitle: true,
         elevation: 2,
       ),
@@ -29,7 +30,7 @@ class _MoreScreenState extends State<MoreScreen> {
     final cardLanguage = Card(
       child: ListTile(
         leading: Icon(Icons.language),
-        title: Text("Language"),
+        title: Text(AppLocalization.of(context)!.translate(LocKey.language)),
         trailing: Icon(Icons.navigate_next),
         onTap: (){
           Navigator.pushNamed(context, RouteGenerator.languagePage);

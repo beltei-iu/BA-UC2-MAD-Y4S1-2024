@@ -1,14 +1,6 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:mad3/screens/AnimatedAlignDemo.dart';
-import 'package:mad3/screens/AnimatedContainerDemo.dart';
-import 'package:mad3/screens/AnimatedOpacityDemo.dart';
-import 'package:mad3/screens/AnimatedPositionedDemo.dart';
-import 'package:mad3/screens/AnimatedScreen.dart';
-import 'package:mad3/screens/AnimationControllerDemo.dart';
-import 'package:mad3/screens/CurvedAnimationDemo.dart';
-import 'package:mad3/screens/MyHomePage.dart';
 import 'package:mad3/screens/home_screen.dart';
 import 'package:mad3/screens/language_screen.dart';
 import 'package:mad3/screens/main_screen.dart';
@@ -28,7 +20,7 @@ class RouteGenerator {
 
     switch(settings.name){
       case splashPage:
-        final route = MaterialPageRoute(builder: (BuildContext context) => SplashScreen());
+        final route = MaterialPageRoute(builder: (BuildContext context) => const SplashScreen());
         return route;
       case homePage:
         final route = MaterialPageRoute(builder: (BuildContext context) => MainScreen());

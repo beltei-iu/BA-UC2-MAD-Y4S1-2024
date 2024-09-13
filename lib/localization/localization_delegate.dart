@@ -1,5 +1,3 @@
-
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:mad3/localization/app_localization.dart';
 
@@ -20,11 +18,11 @@ class AppLocalizationDelegate extends LocalizationsDelegate<AppLocalization> {
 
   // ========Option 2
   @override
-  Future<AppLocalization> load(Locale locale) async =>
-      SynchronousFuture<AppLocalization>(
-        AppLocalization(locale)
-     );
-      
+  Future<AppLocalization> load(Locale locale) async {
+    AppLocalization appLocalization = AppLocalization(locale);
+    await appLocalization.load();
+    return appLocalization;
+  }
     
   // Option 1
   // @override
